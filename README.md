@@ -16,6 +16,7 @@ Then visit `http://localhost:8080`.
 
 - `Next` / `Back` buttons move between sections.
 - Number buttons on the left jump to any section.
+- Use the `Subtitle` selector to show English only, or English with Hindi / Bengali subtitle support.
 - Keyboard: `ArrowRight`, `ArrowLeft`, `PageDown`, `PageUp`, `Home`, `End`.
 - Press `F` or the fullscreen icon for presentation mode.
 - Click cards, steps, and equipment items for explanations.
