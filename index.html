@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RK Group Passenger Service Excellence Training</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="rail" aria-label="Training navigation">
+      <div class="brand-mark">
+        <span class="rk">RK</span>
+        <span>GROUP</span>
+      </div>
+      <nav id="slideNav"></nav>
+      <button id="fullscreenBtn" class="icon-btn" type="button" aria-label="Toggle fullscreen">⛶</button>
+    </aside>
+
+    <main id="deck" class="deck" tabindex="0">
+      <div class="progress"><span id="progressBar"></span></div>
+
+      <section class="slide hero active" data-title="Start">
+        <div class="train-scene" aria-hidden="true">
+          <div class="tracks"></div>
+          <div class="train-body">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="hero-copy">
+          <p class="kicker">RK GROUP TRAINING PROGRAM</p>
+          <h1>Passenger Service Excellence Training</h1>
+          <p class="subtitle">Passenger is Our God, Service is Our Duty</p>
+          <p class="hindi">यात्री हमारा भगवान है, सेवा हमारा धर्म है</p>
+          <p class="credit">Created by <strong>Sandip Nandi</strong></p>
+          <button class="primary start-btn" data-go="1" type="button">Start Training</button>
+        </div>
+      </section>
+
+      <section class="slide split" data-title="Why">
+        <div>
+          <p class="kicker">WHY THIS MATTERS</p>
+          <h2>One bad interaction can become a complaint, a video, and a reputation risk.</h2>
+          <p>Every passenger interaction is visible now: complaint portals, social media, mobile videos, and live escalation channels make service quality a public standard.</p>
+        </div>
+        <div class="stat-grid">
+          <button class="stat-card reveal-card" data-popup="Complaints rise when staff argue, overcharge, block movement, or ignore hygiene.">Complaint Portal</button>
+          <button class="stat-card reveal-card" data-popup="A passenger video can travel faster than any internal report. Calm behaviour protects the brand.">Viral Video</button>
+          <button class="stat-card reveal-card" data-popup="IRCTC compliance is not optional: pricing, ID card, hygiene, and vendor authorization must be visible.">IRCTC Compliance</button>
+          <button class="stat-card reveal-card" data-popup="Trust is built through daily behaviour: smile, listen, serve safely, and close politely.">Passenger Trust</button>
+        </div>
+      </section>
+
+      <section class="slide story" data-title="Customer">
+        <p class="kicker">CUSTOMER IS OUR GOD</p>
+        <h2>We are not only selling food. We are serving people in transit.</h2>
+        <div class="people-row">
+          <div><span>Senior citizens</span><p>Need patience, clarity, and safety.</p></div>
+          <div><span>Women passengers</span><p>Need respectful distance and confidence.</p></div>
+          <div><span>Families</span><p>Need clean food and quick help.</p></div>
+          <div><span>Tourists</span><p>Judge the journey through our service.</p></div>
+        </div>
+        <blockquote>Food Sells Once. Service Sells Forever.</blockquote>
+      </section>
+
+      <section class="slide cards" data-title="Service">
+        <p class="kicker">PASSENGER SERVICE EXCELLENCE</p>
+        <h2>Five small behaviours create a professional passenger experience.</h2>
+        <div class="service-cards">
+          <button data-detail="Start with eye contact and a calm face. A smile lowers complaint energy before words begin.">Smile</button>
+          <button data-detail="Use simple greetings: Namaste, Sir, Madam. Speak in Hindi or English as needed.">Greet</button>
+          <button data-detail="Let the passenger finish the sentence. Never interrupt a complaint.">Listen</button>
+          <button data-detail="Offer the available solution, alternate product, or escalation path.">Help</button>
+          <button data-detail="Close with thanks. The final tone is what many passengers remember.">Thank</button>
+        </div>
+        <p id="serviceDetail" class="live-note">Click any behaviour to see the service standard.</p>
+      </section>
+
+      <section class="slide poster-layout" data-title="Do / Don't">
+        <div class="poster-copy">
+          <p class="kicker">GOOD VS BAD BEHAVIOUR</p>
+          <h2>Do this: speak politely, sell at MRP, and keep the passage clear.</h2>
+          <div class="scenario-list">
+            <button data-popup="Never argue. Listen, acknowledge, and offer a solution or escalation.">Arguing with passengers</button>
+            <button data-popup="Do not sell above MRP. Pricing violations create complaints and compliance risk.">Overcharging</button>
+            <button data-popup="Keep aisles clear so passengers and railway staff can move safely.">Blocking passage</button>
+          </div>
+        </div>
+        <img src="assets/images/do-dont.png" alt="RK Group Do This and Don't Do This poster" />
+      </section>
+
+      <section class="slide process" data-title="Complaint">
+        <p class="kicker">COMPLAINT HANDLING</p>
+        <h2>Stay calm, show respect, and provide a solution.</h2>
+        <div class="steps">
+          <button data-popup="Let the passenger explain fully without interruption.">1 Listen Completely</button>
+          <button data-popup="Keep voice low, posture open, and words respectful.">2 Stay Calm</button>
+          <button data-popup="Use empathy: I understand your concern and I will help.">3 Show Empathy</button>
+          <button data-popup="Offer replacement, refund route, supervisor escalation, or correct information.">4 Offer Solution</button>
+          <button data-popup="Thank the passenger and close politely after action is taken.">5 Thank Passenger</button>
+        </div>
+        <img class="wide-poster" src="assets/images/complaint-handling.png" alt="RK Group complaint handling poster" />
+      </section>
+
+      <section class="slide branch" data-title="Social Media">
+        <p class="kicker">THE SOCIAL MEDIA ERA</p>
+        <h2>When a passenger records video, the next 30 seconds decide the story.</h2>
+        <div class="branch-panel">
+          <div>
+            <h3>Passenger records a complaint</h3>
+            <p id="branchResult">Choose the response path.</p>
+          </div>
+          <div class="branch-actions">
+            <button data-branch="wrong">Wrong response</button>
+            <button data-branch="correct">Correct response</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide compliance" data-title="MRP">
+        <p class="kicker">MRP & PRICING COMPLIANCE</p>
+        <h2>Sell only at approved MRP. Fair pricing protects RK Group and IRCTC trust.</h2>
+        <div class="price-grid">
+          <div><span>Water bottle</span><strong>MRP only</strong><p>No extra charge, no rounding up.</p></div>
+          <div><span>Packed food</span><strong>Approved rate</strong><p>Show price clearly if asked.</p></div>
+          <div><span>Complaint risk</span><strong>High</strong><p>Overcharging is easy to record and report.</p></div>
+        </div>
+      </section>
+
+      <section class="slide checklist" data-title="Hygiene">
+        <p class="kicker">FOOD SAFETY & HYGIENE</p>
+        <h2>Clean food starts before service begins.</h2>
+        <div class="checklist-grid">
+          <label><input type="checkbox" /> Washed hands before service</label>
+          <label><input type="checkbox" /> Clean serving tray and utensils</label>
+          <label><input type="checkbox" /> Hair protection and clean cap</label>
+          <label><input type="checkbox" /> Fresh and covered food</label>
+          <label><input type="checkbox" /> Clean pantry surfaces</label>
+          <label><input type="checkbox" /> Waste placed in dustbin</label>
+        </div>
+      </section>
+
+      <section class="slide uniform" data-title="Uniform">
+        <p class="kicker">UNIFORM & GROOMING STANDARDS</p>
+        <h2>Proper uniform and visible QR ID card prove authorized service.</h2>
+        <div class="profile-cards">
+          <figure>
+            <img src="assets/images/uniform-example.jpeg" alt="Actual RK Group vendor uniform example" />
+            <figcaption>Actual uniform example: navy cap and vest, light blue shirt/apron, clean appearance.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/id-card-example.jpeg" alt="Actual RK Group IRCTC QR ID card example" />
+            <figcaption>Actual ID card example: QR card must be visible and available for verification.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="slide flow" data-title="Unauthorized">
+        <p class="kicker">UNAUTHORIZED VENDORS</p>
+        <h2>Identify, report, and escalate unauthorized vending immediately.</h2>
+        <div class="flow-line">
+          <span>Identify</span>
+          <span>Confirm ID</span>
+          <span>Report on WhatsApp</span>
+          <span>Notify railway authority</span>
+          <span>Protect passengers</span>
+        </div>
+      </section>
+
+      <section class="slide equipment" data-title="Equipment">
+        <p class="kicker">EQUIPMENT CARE</p>
+        <h2>Safe equipment keeps food quality and service continuity strong.</h2>
+        <div class="equipment-grid">
+          <button data-popup="Clean after use, report heating or electrical issues.">Oven</button>
+          <button data-popup="Handle hot water safely and report leakage.">Boiler</button>
+          <button data-popup="Use only approved containers and keep interior clean.">Microwave</button>
+          <button data-popup="Maintain temperature and close doors properly.">Refrigerator</button>
+          <button data-popup="Keep surface dry and report damage immediately.">Induction</button>
+        </div>
+      </section>
+
+      <section class="slide poster-layout" data-title="Guidelines">
+        <div class="poster-copy">
+          <p class="kicker">OTHER IMPORTANT GUIDELINES</p>
+          <h2>Cleanliness, safety, food quality, and discipline are daily standards.</h2>
+          <div class="pill-grid">
+            <span>No tobacco</span><span>No intoxication</span><span>Clean uniform</span><span>No littering</span><span>Passenger safety</span><span>Food quality</span><span>Equipment care</span><span>Authorized products only</span>
+          </div>
+        </div>
+        <img src="assets/images/guidelines.png" alt="RK Group other important guidelines poster" />
+      </section>
+
+      <section class="slide promise" data-title="Promise">
+        <p class="kicker">OUR PROMISE</p>
+        <h2>Six promises define how RK Group staff serve every passenger.</h2>
+        <div class="promise-wall">
+          <button>Clean Food</button>
+          <button>Honest Service</button>
+          <button>Fair Pricing</button>
+          <button>Respectful Behaviour</button>
+          <button>Passenger Safety</button>
+          <button>Passenger Satisfaction</button>
+        </div>
+        <img class="wide-poster" src="assets/images/promise.png" alt="RK Group Our Promise poster" />
+      </section>
+
+      <section class="slide oath" data-title="Oath">
+        <p class="kicker">RK GROUP SERVICE OATH</p>
+        <h2>Click agree to reveal the commitments one by one.</h2>
+        <button id="agreeBtn" class="primary" type="button">I Agree</button>
+        <ol id="oathList">
+          <li>I will treat every passenger with respect.</li>
+          <li>I will serve clean and safe food.</li>
+          <li>I will sell only at approved MRP.</li>
+          <li>I will wear clean uniform and visible ID card.</li>
+          <li>I will report unsafe or unauthorized activity.</li>
+        </ol>
+      </section>
+
+      <section class="slide quiz" data-title="Quiz">
+        <p class="kicker">KNOWLEDGE CHECK QUIZ</p>
+        <h2>Answer all 15 questions and check your score.</h2>
+        <div id="quizBox"></div>
+        <button id="submitQuiz" class="primary" type="button">Submit Quiz</button>
+        <p id="quizResult" class="live-note"></p>
+      </section>
+
+      <section class="slide closing" data-title="Closing">
+        <div class="train-scene small" aria-hidden="true">
+          <div class="tracks"></div>
+          <div class="train-body">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <p class="kicker">FINAL CLOSING</p>
+        <h2>Passenger Is Our God.<br />Service Is Our Duty.</h2>
+        <p>Food Sells Once. Service Sells Forever.</p>
+        <div class="developer-credit">
+          <span>Created By</span>
+          <strong>Sandip Nandi</strong>
+          <em>RK Group | We Dream We Do</em>
+        </div>
+      </section>
+    </main>
+
+    <div class="controls" aria-label="Slide controls">
+      <button id="prevBtn" type="button">Back</button>
+      <span id="slideCounter"></span>
+      <button id="nextBtn" type="button">Next</button>
+    </div>
+  </div>
+
+  <dialog id="infoDialog">
+    <p id="dialogText"></p>
+    <button id="closeDialog" class="primary" type="button">Close</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
