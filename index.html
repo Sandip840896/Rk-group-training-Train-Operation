@@ -224,11 +224,52 @@
       </section>
 
       <section class="slide quiz" data-title="Quiz">
-        <p class="kicker">KNOWLEDGE CHECK QUIZ</p>
-        <h2>Answer all 15 questions and check your score.</h2>
-        <div id="quizBox"></div>
-        <button id="submitQuiz" class="primary" type="button">Submit Quiz</button>
-        <p id="quizResult" class="live-note"></p>
+        <p class="kicker">POST-TRAINING TEST</p>
+        <h2>Take a short service challenge and earn your completion badge.</h2>
+        <div class="test-shell">
+          <div id="quizIntro" class="quiz-intro">
+            <div>
+              <span class="test-badge">10 questions</span>
+              <h3>Ready for the RK Group Service Check?</h3>
+              <p>Answer one question at a time. You will get quick feedback after every answer.</p>
+            </div>
+            <label class="trainee-name">
+              <span>Trainee name</span>
+              <input id="traineeName" type="text" placeholder="Enter your name" autocomplete="name" />
+            </label>
+            <button id="startQuiz" class="primary" type="button">Start Test</button>
+          </div>
+
+          <div id="quizStage" class="quiz-stage" hidden>
+            <div class="quiz-topline">
+              <span id="quizProgressText">Question 1 / 10</span>
+              <span id="quizScorePill">Score 0</span>
+            </div>
+            <div class="quiz-meter"><span id="quizMeter"></span></div>
+            <div id="quizDots" class="quiz-dots" aria-label="Question progress"></div>
+            <article class="question-card">
+              <p id="questionCategory" class="question-category"></p>
+              <h3 id="questionText"></h3>
+              <div id="answerOptions" class="answer-options"></div>
+              <p id="answerFeedback" class="answer-feedback" aria-live="polite"></p>
+            </article>
+            <div class="quiz-actions">
+              <button id="nextQuestion" class="primary" type="button" disabled>Next Question</button>
+            </div>
+          </div>
+
+          <div id="quizResultCard" class="quiz-result-card" hidden>
+            <span id="resultBadge" class="test-badge">Completed</span>
+            <h3 id="resultTitle">Service Check Complete</h3>
+            <p id="resultScore"></p>
+            <div class="certificate-panel">
+              <span>RK Group Training Completion</span>
+              <strong id="certificateName">Trainee</strong>
+              <em>Passenger Service Excellence & IRCTC Compliance</em>
+            </div>
+            <button id="retakeQuiz" class="primary" type="button">Retake Test</button>
+          </div>
+        </div>
       </section>
 
       <section class="slide closing" data-title="Closing">

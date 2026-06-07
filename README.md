@@ -20,7 +20,7 @@ Then visit `http://localhost:8080`.
 - Keyboard: `ArrowRight`, `ArrowLeft`, `PageDown`, `PageUp`, `Home`, `End`.
 - Press `F` or the fullscreen icon for presentation mode.
 - Click cards, steps, and equipment items for explanations.
-- Complete the quiz to see the score and certificate message.
+- Complete the post-training service test to see instant feedback, score, pass status, and the certificate-style completion badge.
 
 ## Included Assets
 

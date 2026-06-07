@@ -25,7 +25,7 @@ const slideSubtitles = {
     Guidelines: "स्वच्छता, सुरक्षा, भोजन गुणवत्ता और अनुशासन दैनिक मानक हैं।",
     Promise: "छह वचन बताते हैं कि RK Group हर यात्री की सेवा कैसे करता है।",
     Oath: "सहमति पर क्लिक करें और प्रतिबद्धताएं एक-एक करके देखें।",
-    Quiz: "15 प्रश्नों के उत्तर दें और अपना स्कोर देखें।",
+    Quiz: "छोटी सेवा चुनौती पूरी करें और अपना समापन बैज प्राप्त करें।",
     Closing: "यात्री हमारा भगवान है। सेवा हमारा धर्म है।"
   },
   bn: {
@@ -44,7 +44,7 @@ const slideSubtitles = {
     Guidelines: "পরিচ্ছন্নতা, নিরাপত্তা, খাবারের মান এবং শৃঙ্খলা প্রতিদিনের মানদণ্ড।",
     Promise: "ছয়টি প্রতিশ্রুতি জানায় RK Group কীভাবে প্রতিটি যাত্রীকে সেবা দেয়।",
     Oath: "সম্মতিতে ক্লিক করুন এবং প্রতিশ্রুতিগুলি একে একে দেখুন।",
-    Quiz: "১৫টি প্রশ্নের উত্তর দিন এবং আপনার স্কোর দেখুন।",
+    Quiz: "ছোট সেবা চ্যালেঞ্জ সম্পূর্ণ করুন এবং আপনার সমাপ্তি ব্যাজ পান।",
     Closing: "যাত্রী আমাদের ঈশ্বর। সেবা আমাদের ধর্ম।"
   }
 };
@@ -121,22 +121,84 @@ const branchTranslations = {
 };
 
 const quiz = [
-  ["What should you do first during a complaint?", ["Interrupt and explain", "Listen completely", "Call another vendor"], 1],
-  ["Can a vendor sell above MRP?", ["Yes", "No", "Only if passenger agrees"], 1],
-  ["ID card should be:", ["Hidden in pocket", "Visible and verifiable", "Kept at home"], 1],
-  ["Best tone with passengers:", ["Calm and respectful", "Loud and strict", "Silent"], 0],
-  ["Passage should be:", ["Blocked by tray", "Clear", "Used for storage"], 1],
-  ["Tobacco during duty is:", ["Allowed", "Strictly prohibited", "Allowed after lunch"], 1],
-  ["If passenger records video, staff should:", ["Argue", "Stay calm and solve", "Hide"], 1],
-  ["Clean uniform means:", ["Professional image", "Optional detail", "Only for inspection"], 0],
-  ["Food safety starts with:", ["Fast selling", "Clean hands", "High voice"], 1],
-  ["Unauthorized vendor should be:", ["Ignored", "Reported immediately", "Allowed to sell"], 1],
-  ["After solving complaint, vendor should:", ["Leave silently", "Thank and close politely", "Blame passenger"], 1],
-  ["Equipment issue should be:", ["Reported", "Hidden", "Ignored until next trip"], 0],
-  ["Passenger safety is:", ["Our responsibility", "Only railway duty", "Not vendor duty"], 0],
-  ["Fair pricing builds:", ["Trust", "Fear", "Confusion"], 0],
-  ["RK Group promise includes:", ["Clean food and honest service", "Overcharging", "No ID card"], 0]
+  {
+    category: "Complaint Handling",
+    question: "A passenger is angry about food quality. What should you do first?",
+    options: ["Explain your side immediately", "Listen completely without interrupting", "Ask another passenger to decide", "Walk away"],
+    correct: 1,
+    feedback: "First listen completely. A calm start makes the solution easier."
+  },
+  {
+    category: "MRP Compliance",
+    question: "A water bottle has printed MRP. What price should be charged?",
+    options: ["Any price passenger agrees", "MRP only", "MRP plus service charge", "Round figure above MRP"],
+    correct: 1,
+    feedback: "Sell only at MRP. Overcharging creates serious complaint risk."
+  },
+  {
+    category: "Uniform & ID",
+    question: "What proves that a vendor is authorized during service?",
+    options: ["Visible QR ID card and proper uniform", "Only verbal confirmation", "Carrying cash memo", "Knowing the coach number"],
+    correct: 0,
+    feedback: "Proper uniform and visible QR ID card must be maintained."
+  },
+  {
+    category: "Passenger Respect",
+    question: "Which behaviour best represents RK Group service culture?",
+    options: ["Speak loudly to finish fast", "Smile, greet, listen, help, thank", "Avoid passenger questions", "Serve only regular customers"],
+    correct: 1,
+    feedback: "Small respectful behaviours create the strongest passenger experience."
+  },
+  {
+    category: "Safety",
+    question: "Why should the train passage remain clear?",
+    options: ["It looks better only", "It helps safe passenger and staff movement", "It is useful for storage", "It saves cleaning time"],
+    correct: 1,
+    feedback: "Clear passage is a safety requirement, not a decoration."
+  },
+  {
+    category: "Discipline",
+    question: "What is the correct rule for tobacco or intoxication during duty?",
+    options: ["Allowed after service", "Allowed outside pantry", "Strictly prohibited", "Allowed if passengers do not see"],
+    correct: 2,
+    feedback: "Tobacco and intoxication are strictly prohibited in service duty."
+  },
+  {
+    category: "Social Media Era",
+    question: "If a passenger records a complaint video, what is the safest response?",
+    options: ["Argue strongly", "Hide your ID card", "Stay calm and offer a solution", "Tell them to stop recording"],
+    correct: 2,
+    feedback: "Calm behaviour protects passengers, staff, and brand reputation."
+  },
+  {
+    category: "Food Hygiene",
+    question: "Which action should happen before serving food?",
+    options: ["Wash hands and use clean serving items", "Only check the price", "Touch food directly", "Serve first and clean later"],
+    correct: 0,
+    feedback: "Clean hands, clean utensils, and covered food are basic hygiene standards."
+  },
+  {
+    category: "Unauthorized Vendors",
+    question: "What should staff do after identifying an unauthorized vendor?",
+    options: ["Ignore them", "Report immediately through the proper escalation route", "Buy from them", "Let passengers decide"],
+    correct: 1,
+    feedback: "Unauthorized vendors must be reported quickly for passenger safety."
+  },
+  {
+    category: "Complaint Closure",
+    question: "After solving a passenger complaint, what should be the closing step?",
+    options: ["Leave silently", "Thank the passenger and close politely", "Blame the system", "Ask for extra payment"],
+    correct: 1,
+    feedback: "A polite closing helps the passenger remember the service positively."
+  }
 ];
+
+const quizState = {
+  index: 0,
+  score: 0,
+  answered: false,
+  answers: []
+};
 
 function withTranslation(english, group) {
   const translated = group?.[activeLang]?.[english];
@@ -231,37 +293,100 @@ function wireCards() {
 }
 
 function buildQuiz() {
-  const box = document.getElementById("quizBox");
-  quiz.forEach(([question, options], qIndex) => {
-    const wrap = document.createElement("div");
-    wrap.className = "question";
-    const title = document.createElement("p");
-    title.textContent = `${qIndex + 1}. ${question}`;
-    wrap.appendChild(title);
-    options.forEach((option, oIndex) => {
-      const label = document.createElement("label");
-      const input = document.createElement("input");
-      input.type = "radio";
-      input.name = `q${qIndex}`;
-      input.value = oIndex;
-      label.append(input, ` ${option}`);
-      wrap.appendChild(label);
-    });
-    box.appendChild(wrap);
+  const startBtn = document.getElementById("startQuiz");
+  const nextBtn = document.getElementById("nextQuestion");
+  const retakeBtn = document.getElementById("retakeQuiz");
+  const dots = document.getElementById("quizDots");
+
+  dots.innerHTML = quiz.map(() => "<span></span>").join("");
+
+  startBtn.addEventListener("click", startQuiz);
+  nextBtn.addEventListener("click", () => {
+    if (quizState.index < quiz.length - 1) {
+      quizState.index += 1;
+      renderQuestion();
+    } else {
+      showQuizResult();
+    }
+  });
+  retakeBtn.addEventListener("click", startQuiz);
+}
+
+function startQuiz() {
+  quizState.index = 0;
+  quizState.score = 0;
+  quizState.answered = false;
+  quizState.answers = [];
+  document.getElementById("quizIntro").hidden = true;
+  document.getElementById("quizResultCard").hidden = true;
+  document.getElementById("quizStage").hidden = false;
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const item = quiz[quizState.index];
+  quizState.answered = false;
+  document.getElementById("questionCategory").textContent = item.category;
+  document.getElementById("questionText").textContent = item.question;
+  document.getElementById("quizProgressText").textContent = `Question ${quizState.index + 1} / ${quiz.length}`;
+  document.getElementById("quizScorePill").textContent = `Score ${quizState.score}`;
+  document.getElementById("quizMeter").style.width = `${(quizState.index / quiz.length) * 100}%`;
+  document.getElementById("answerFeedback").textContent = "";
+  document.getElementById("nextQuestion").disabled = true;
+  document.getElementById("nextQuestion").textContent = quizState.index === quiz.length - 1 ? "See Result" : "Next Question";
+
+  const answerBox = document.getElementById("answerOptions");
+  answerBox.innerHTML = "";
+  item.options.forEach((option, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = option;
+    button.addEventListener("click", () => chooseAnswer(index));
+    answerBox.appendChild(button);
+  });
+  updateQuizDots();
+}
+
+function chooseAnswer(selectedIndex) {
+  if (quizState.answered) return;
+  quizState.answered = true;
+  const item = quiz[quizState.index];
+  const isCorrect = selectedIndex === item.correct;
+  if (isCorrect) quizState.score += 1;
+  quizState.answers[quizState.index] = isCorrect ? "correct" : "wrong";
+
+  document.querySelectorAll("#answerOptions button").forEach((button, index) => {
+    button.disabled = true;
+    if (index === item.correct) button.classList.add("correct");
+    if (index === selectedIndex && !isCorrect) button.classList.add("wrong");
+    if (index !== item.correct && index !== selectedIndex) button.classList.add("dimmed");
   });
 
-  document.getElementById("submitQuiz").addEventListener("click", () => {
-    let score = 0;
-    quiz.forEach(([, , correct], qIndex) => {
-      const selected = document.querySelector(`input[name="q${qIndex}"]:checked`);
-      if (selected && Number(selected.value) === correct) score += 1;
-    });
-    const percent = Math.round((score / quiz.length) * 100);
-    const english = `Score: ${score}/${quiz.length} (${percent}%). ${percent >= 80 ? "Certificate ready: Passenger Service Excellence completed." : "Please revise the key standards and try again."}`;
-    const hi = `स्कोर: ${score}/${quiz.length} (${percent}%). ${percent >= 80 ? "प्रमाणपत्र तैयार: यात्री सेवा उत्कृष्टता पूर्ण।" : "कृपया मुख्य मानक दोबारा पढ़ें और फिर प्रयास करें।"}`;
-    const bn = `স্কোর: ${score}/${quiz.length} (${percent}%). ${percent >= 80 ? "সার্টিফিকেট প্রস্তুত: যাত্রী সেবা উৎকর্ষ সম্পন্ন।" : "দয়া করে মূল মানদণ্ড আবার দেখুন এবং আবার চেষ্টা করুন।"}`;
-    document.getElementById("quizResult").textContent = activeLang === "hi" ? `${english} (${hi})` : activeLang === "bn" ? `${english} (${bn})` : english;
+  document.getElementById("answerFeedback").textContent = `${isCorrect ? "Correct." : "Not quite."} ${item.feedback}`;
+  document.getElementById("quizScorePill").textContent = `Score ${quizState.score}`;
+  document.getElementById("quizMeter").style.width = `${((quizState.index + 1) / quiz.length) * 100}%`;
+  document.getElementById("nextQuestion").disabled = false;
+  updateQuizDots();
+}
+
+function updateQuizDots() {
+  document.querySelectorAll("#quizDots span").forEach((dot, index) => {
+    dot.className = "";
+    if (index === quizState.index && !quizState.answers[index]) dot.classList.add("current");
+    if (quizState.answers[index]) dot.classList.add(quizState.answers[index]);
   });
+}
+
+function showQuizResult() {
+  const name = document.getElementById("traineeName").value.trim() || "Trainee";
+  const percent = Math.round((quizState.score / quiz.length) * 100);
+  const passed = percent >= 80;
+  document.getElementById("quizStage").hidden = true;
+  document.getElementById("quizResultCard").hidden = false;
+  document.getElementById("resultBadge").textContent = passed ? "Passed" : "Revise & Retake";
+  document.getElementById("resultTitle").textContent = passed ? "Service Check Passed" : "Almost There";
+  document.getElementById("resultScore").textContent = `Score: ${quizState.score}/${quiz.length} (${percent}%). ${passed ? "You are ready to apply the RK Group service standards." : "Please review the key standards and take the test again."}`;
+  document.getElementById("certificateName").textContent = name;
 }
 
 function wireControls() {
